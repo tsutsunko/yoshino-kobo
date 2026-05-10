@@ -312,75 +312,51 @@ h1 {
 
 .news {
   border-top: 1px solid var(--line);
-  background: rgba(255, 254, 250, 0.42);
+  background: rgba(255, 254, 250, 0.28);
 }
 
 .news-grid {
-  display: grid;
-  grid-template-columns: 1.35fr 1fr 1fr;
-  gap: 16px;
+  display: block;
+  border-top: 1px solid var(--line);
 }
 
 .news-card {
-  display: flex;
-  flex-direction: column;
-  min-height: 240px;
-  padding: 22px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--paper);
+  display: grid;
+  grid-template-columns: 112px minmax(180px, 0.42fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
   color: inherit;
   text-decoration: none;
-  transition:
-    border-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .news-card:hover {
-  border-color: var(--accent-soft);
-  box-shadow: 0 16px 42px rgba(50, 41, 32, 0.1);
-  transform: translateY(-2px);
+  color: var(--accent-dark);
 }
 
 .news-card time {
   display: block;
-  margin-bottom: 18px;
+  margin: 0;
   color: var(--accent-dark);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 760;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .news-card h3 {
-  margin-bottom: 12px;
-  font-size: 22px;
-  line-height: 1.45;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.55;
 }
 
 .news-card p {
   margin: 0;
   color: var(--muted);
+  font-size: 14px;
   line-height: 1.75;
-}
-
-.news-card.feature {
-  display: grid;
-  grid-template-columns: minmax(120px, 0.82fr) minmax(0, 1fr);
-  gap: 18px;
-  padding: 18px;
-}
-
-.news-card.feature img {
-  width: 100%;
-  height: 100%;
-  min-height: 210px;
-  border-radius: 8px;
-  object-fit: cover;
-  object-position: center top;
-}
-
-.news-card.feature div {
-  align-self: center;
 }
 
 .grid {
@@ -757,13 +733,13 @@ h1 {
   }
 
   .grid,
-  .steps,
-  .news-grid {
+  .steps {
     grid-template-columns: 1fr;
   }
 
-  .news-card.feature {
-    grid-template-columns: minmax(120px, 0.55fr) minmax(0, 1fr);
+  .news-card {
+    grid-template-columns: 92px minmax(0, 0.52fr) minmax(0, 1fr);
+    gap: 14px;
   }
 
   .flow-heading {
@@ -850,16 +826,10 @@ h1 {
     width: 100%;
   }
 
-  .news-card,
-  .news-card.feature {
-    display: flex;
-    min-height: 0;
-  }
-
-  .news-card.feature img {
-    aspect-ratio: 4 / 3;
-    height: auto;
-    min-height: 0;
+  .news-card {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px 0;
   }
 
   .hero-pet {
