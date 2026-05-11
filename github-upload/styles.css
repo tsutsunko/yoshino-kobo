@@ -117,11 +117,11 @@ p {
 }
 
 h1 {
-  max-width: 1160px;
+  max-width: 1040px;
   margin-right: auto;
   margin-bottom: 24px;
   margin-left: auto;
-  font-size: clamp(38px, 5.2vw, 82px);
+  font-size: clamp(38px, 3.2vw, 56px);
   line-height: 1.04;
   letter-spacing: 0;
   text-align: center;
