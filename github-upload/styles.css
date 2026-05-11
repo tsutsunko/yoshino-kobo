@@ -118,15 +118,18 @@ p {
 
 h1 {
   max-width: 1160px;
+  margin-right: auto;
   margin-bottom: 24px;
+  margin-left: auto;
   font-size: clamp(38px, 5.2vw, 82px);
   line-height: 1.04;
   letter-spacing: 0;
+  text-align: center;
   white-space: nowrap;
 }
 
 .hero-text {
-  max-width: 760px;
+  max-width: 1040px;
   margin-right: auto;
   margin-left: auto;
   color: var(--muted);
@@ -1059,6 +1062,10 @@ h1 {
     font-size: 32px;
     line-height: 1.08;
     white-space: normal;
+  }
+
+  h1 span {
+    display: block;
   }
 
   .hero-logo {
