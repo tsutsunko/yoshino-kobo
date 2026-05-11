@@ -80,12 +80,15 @@ main {
 .hero {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: calc(100vh - 74px);
   padding: clamp(48px, 8vw, 104px) clamp(20px, 5vw, 64px) 72px;
 }
 
 .hero-copy {
   max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-logo {
@@ -123,6 +126,8 @@ h1 {
 
 .hero-text {
   max-width: 620px;
+  margin-right: auto;
+  margin-left: auto;
   color: var(--muted);
   font-size: clamp(17px, 2vw, 20px);
   line-height: 1.9;
@@ -132,6 +137,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
   margin-top: 34px;
 }
 
@@ -183,9 +189,10 @@ h1 {
   align-items: center;
   gap: 18px;
   max-width: 620px;
-  margin-top: 28px;
+  margin: 28px auto 0;
   padding-top: 22px;
   border-top: 1px solid var(--line);
+  text-align: left;
 }
 
 .hero-side-note span,
@@ -962,6 +969,14 @@ h1 {
     padding-bottom: 56px;
   }
 
+  .hero-copy {
+    text-align: left;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
   .hero-logo {
     width: min(360px, 76vw);
   }
@@ -1138,7 +1153,14 @@ h1 {
   }
 
   .movie-support {
-    display: none;
+    gap: 8px;
+  }
+
+  .movie-support span {
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
   }
 
   .movie-price-row strong {
